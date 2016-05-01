@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin name="Submit By Ctrl+Enter" version_long="10000" version_human="1.0.0" author="Fm Web (Recouse)" website="http://fm-web.studio" update_check=""><hooks/><htmlFiles/><cssFiles/><jsFiles><js filename="submitByCtrlEnter.js">LyoqCgogICogU3VibWl0IEJ5IEN0cmwrRW50ZXIgCiAgKiBCeSBGbSBXZWIgKFJlY291c2UpCiAgKiBodHRwOi8vZm0td2ViLnN0dWRpbwoKICovCgokKGZ1bmN0aW9uKCl7CiAgICB2YXIgZm9ybXMgPSAnZGl2LmNUb3BpY1Bvc3RBcmVhID4gZm9ybS5pcHNGb3JtJzsKICAgIAogICAgJChmb3Jtcykua2V5ZG93bihmdW5jdGlvbihldmVudCkgewogICAgICAgIGlmKGV2ZW50LmN0cmxLZXkgJiYgZXZlbnQud2hpY2ggPT0gMTMpIHsKICAgICAgICAgICAkKGZvcm1zKS5zdWJtaXQoKTsKICAgICAgICB9OwogICAgfSk7Cn0pOw==</js></jsFiles><resourcesFiles/><lang/><versions><version long="10000" human="1.0.0"><![CDATA[//<?php
+<plugin name="Submit By Ctrl+Enter" version_long="10001" version_human="1.0.1" author="Fm Web (Recouse)" website="http://fm-web.studio" update_check=""><hooks/><htmlFiles/><cssFiles/><jsFiles><js filename="submitByCtrlEnter.js">LyoqCgogICogU3VibWl0IEJ5IEN0cmwrRW50ZXIgCiAgKiBCeSBGbSBXZWIgKFJlY291c2UpCiAgKiBodHRwOi8vZm0td2ViLnN0dWRpbwoKICovCgokKGZ1bmN0aW9uKCl7CiAgICB2YXIgZm9ybXMgPSAnZGl2LmNUb3BpY1Bvc3RBcmVhID4gZm9ybS5pcHNGb3JtLCBkaXYjZWxNZXNzYWdlVmlld2VyIGRpdltkYXRhLWNvbnRyb2xsZXI9ImNvcmUuZnJvbnQuY29yZS5jb21tZW50RmVlZCJdIGZvcm0uaXBzRm9ybSc7CiAgICAKICAgICQoZm9ybXMpLmtleWRvd24oZnVuY3Rpb24oZXZlbnQpIHsKICAgICAgICBpZihldmVudC5jdHJsS2V5ICYmIGV2ZW50LndoaWNoID09IDEzKSB7CiAgICAgICAgICAgJChmb3Jtcykuc3VibWl0KCk7CiAgICAgICAgfTsKICAgIH0pOwp9KTs=</js></jsFiles><resourcesFiles/><lang/><versions><version long="10000" human="1.0.0"><![CDATA[//<?php
 
 
 /* To prevent PHP errors (extending class does not exist) revealing path */
@@ -13,6 +13,35 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
  * Install Code
  */
 class ips_plugins_setup_install
+{
+	/**
+	 * ...
+	 *
+	 * @return	array	If returns TRUE, upgrader will proceed to next step. If it returns any other value, it will set this as the value of the 'extra' GET parameter and rerun this step (useful for loops)
+	 */
+	public function step1()
+	{
+		
+
+		return TRUE;
+	}
+	
+	// You can create as many additional methods (step2, step3, etc.) as is necessary.
+	// Each step will be executed in a new HTTP request
+}]]></version><version long="10001" human="1.0.1"><![CDATA[//<?php
+
+
+/* To prevent PHP errors (extending class does not exist) revealing path */
+if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
+{
+	header( ( isset( $_SERVER['SERVER_PROTOCOL'] ) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0' ) . ' 403 Forbidden' );
+	exit;
+}
+
+/**
+ * 1.0.1 Upgrade Code
+ */
+class ips_plugins_setup_upg_10001
 {
 	/**
 	 * ...
